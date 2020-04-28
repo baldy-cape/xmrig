@@ -4,8 +4,10 @@ Tested mining Monero (XMR) on Intel, AMD and ARM (Raspberry Pi).
 
 ## RPi (Raspberry Pi) Support
 Works on Rasperry Pi devices with ARMv7 or greater CPU
+
     cat /proc/cpuinfo | grep model | uniq
     model name      : ARMv7 Processor rev 4 (v7l)
+    
 Unfortunatley does not work on older ARMv6 devices as they are no supported by xmrig (https://github.com/xmrig/xmrig/issues/437)
 
 # Quick install and run
@@ -15,7 +17,8 @@ Unfortunatley does not work on older ARMv6 devices as they are no supported by x
     laurence@raspberrypi $ docker logs xmrig
 
 # Hashrate Comparison
-##Intel(R) Core(TM) i7-8565U
+## Intel(R) Core(TM) i7-8565U
+
     |    CPU # | AFFINITY | 10s H/s | 60s H/s | 15m H/s |
     |        0 |        0 |   230.3 |     n/a |     n/a |
     |        1 |        1 |   226.2 |     n/a |     n/a |
@@ -23,7 +26,8 @@ Unfortunatley does not work on older ARMv6 devices as they are no supported by x
     |        3 |        3 |   262.9 |     n/a |     n/a |
     |        - |        - |   977.9 |     n/a |     n/a |
 
-##ARMv7 (Raspberry Pi 3 Model B Plus Rev 1.3)
+## ARMv7 (Raspberry Pi 3 Model B Plus Rev 1.3)
+
     |    CPU # | AFFINITY | 10s H/s | 60s H/s | 15m H/s |
     |        0 |       -1 |     n/a |     n/a |     0.5 |
     |        1 |       -1 |     n/a |     n/a |     0.5 |
