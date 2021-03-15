@@ -1,4 +1,4 @@
-FROM alpine:3.10
+FROM alpine:3.7
 LABEL maintainer="laurence.baldwin@gmail.com"
 RUN echo "@testing http://nl.alpinelinux.org/alpine/edge/testing" >>  /etc/apk/repositories
 RUN echo 'https://dl-cdn.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories
