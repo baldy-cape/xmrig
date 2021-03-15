@@ -3,7 +3,7 @@ LABEL maintainer="laurence.baldwin@gmail.com"
 RUN echo "@testing http://nl.alpinelinux.org/alpine/edge/testing" >>  /etc/apk/repositories
 RUN echo 'https://dl-cdn.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories
 RUN apk add --no-cache git make cmake gcc libuv-dev libuv-static g++ hwloc-dev xmrig@testing openssl-dev libstdc++ linux-headers
-RUN git clone  https://github.com/xmrig/xmrig.git
+RUN git clone --branch dev https://github.com/xmrig/xmrig.git
 RUN mkdir /xmrig/build 
 RUN cd /xmrig/build; cmake .. 
 RUN cd /xmrig/build; make
