@@ -1,6 +1,6 @@
 FROM alpine
 LABEL maintainer="laurence.baldwin@gmail.com"
-RUN echo 'https://dl-cdn.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories
+#RUN echo 'https://dl-cdn.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories
 RUN apk add --no-cache git make libstdc++ gcc g++ libuv-dev openssl-dev hwloc-dev
 RUN git clone --branch dev https://github.com/xmrig/xmrig.git
 RUN mkdir /xmrig/build 
