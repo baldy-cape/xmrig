@@ -1,8 +1,7 @@
-FROM alpine:3.12
+FROM alpine
 LABEL maintainer="laurence.baldwin@gmail.com"
-RUN echo "@testing http://nl.alpinelinux.org/alpine/edge/testing" >>  /etc/apk/repositories
 RUN echo 'https://dl-cdn.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories
-RUN apk add --no-cache git make cmake gcc libuv-dev libuv-static g++ hwloc-dev openssl-dev libstdc++ linux-headers
+RUN apk add --no-cache git make libstdc++ gcc g++ libuv-dev openssl-dev hwloc-dev
 RUN git clone --branch dev https://github.com/xmrig/xmrig.git
 RUN mkdir /xmrig/build 
 RUN cd /xmrig/build; cmake .. 
