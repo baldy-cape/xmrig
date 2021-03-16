@@ -1,4 +1,4 @@
-FROM alpine
+FROM alpine:3.10
 LABEL maintainer="laurence.baldwin@gmail.com"
 #RUN echo 'https://dl-cdn.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories
 RUN apk add --no-cache git make libstdc++ gcc g++ libuv-dev openssl-dev hwloc-dev
