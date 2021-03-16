@@ -1,8 +1,9 @@
-FROM alpine:3.6
+FROM debian
 LABEL maintainer="laurence.baldwin@gmail.com"
-RUN echo 'https://dl-cdn.alpinelinux.org/alpine/edge/community' >> /etc/apk/repositories
-RUN apk add --no-cache git make libstdc++ gcc g++ libuv-dev openssl-dev hwloc-dev cmake linux-headers
-RUN git clone --branch dev https://github.com/xmrig/xmrig.git
+RUN apt-get update 
+RUN apt-get install -y git build-essential cmake libuv1-dev libssl-dev libhwloc-dev
+RUN cd /
+RUN git clone https://github.com/xmrig/xmrig.git
 RUN mkdir /xmrig/build 
 RUN cd /xmrig/build; cmake .. 
 RUN cd /xmrig/build; make
